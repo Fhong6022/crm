@@ -1,6 +1,10 @@
 // //对axios进行二次封装
-axios.defaults.baseURL = "http://localhost:8888";  //配置请求的基本路径
-// //数据以表单的形式传递给服务器
+// axios.defaults.baseURL = "http://localhost:8888";  //配置请求的基本路径
+axios.defaults.baseURL = "http://127.0.0.1:8888";  //配置请求的基本路径
+
+
+axios.defaults.withCredentials = true; //配置为true，后台的请求都会带上cookie
+//数据以表单的形式传递给服务器
 axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
 
 //还是以表单的形式扔给服务器，数据格式：name=z3&age=4
